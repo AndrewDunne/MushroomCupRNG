@@ -1,0 +1,18 @@
+<HTML>
+	<body style="background:no-repeat center/80% url(NSMB_World_1-3.webp);">
+		<div id="result" style="font-size:40px;text-align:center;margin-top:20%;font-weight:bold;color:black;background-color:white;">
+		</div>
+		<script>
+			let options = [1,2,3,4,5];
+			let chosen = "";
+			for (let i = 0; i < 3; i++){
+				let index = Math.floor(Math.random() * options.length);
+				chosen = chosen.concat(options.splice(index,1)[0], " ");
+			}
+			const output = document.getElementById("result");
+			//chosen.concat("aloha");
+			console.log(chosen);
+			output.innerHTML = "The games you'll be rating for the Mushroom Cup are: " + chosen;
+		</script>
+	</body>
+</HTML>
